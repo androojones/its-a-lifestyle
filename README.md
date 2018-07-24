@@ -1,6 +1,6 @@
-# HackerYou Starter Theme
+# Hashtag It's A Lifestyle
 
-This is a simple theme to get you up and running with a new theme in WordPress. 
+Theme: 'HackerYou WordPress Starter Theme' 
 
 ## Gulp
 
