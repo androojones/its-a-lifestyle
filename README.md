@@ -17,4 +17,6 @@ gulp.task('bs', function() {
 });
 ```
 
+#Sass
 
+In order to use Sass during development, navigate to theme folder in terminal and run `gulp watch` to initialize Sass file processing.
