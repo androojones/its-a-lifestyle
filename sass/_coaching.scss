@@ -1,0 +1,254 @@
+#coach_hero {
+	background-color: $pastel--pink;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+	.coach_hero__img {
+		height: 80vh;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+}
+
+#coach_roots {
+	background-color: $purple--light;
+	.card_wrapper.card-1{
+		.popout__border {
+		   border-color: $pastel--pink;
+		}
+		.popout__inset {
+		  background-color: $pastel--pink;
+		}
+		}
+		.card_wrapper.card-2{
+		.popout__border {
+		   border-color: $pastel--purple;
+		}
+		.popout__inset {
+		  background-color: $pastel--purple;
+		}
+		}
+		.card_wrapper.card-3{
+		.popout__border {
+		   border-color: $pastel--green;
+		}
+		.popout__inset {
+		  background-color: $pastel--green;
+		}
+	}
+}
+
+.roots__tagline {
+	text-align: center;
+	h3 {
+		padding: 22.5px 0px;
+	}
+}
+
+#coach_offers {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+	.offer__box {
+		text-align: center;
+		min-height: 500px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		&:nth-child(1) {
+			background-color: $pastel--purple;
+			grid-column: 1 / -1;
+			p {
+				width: 60%;
+			}
+		}
+		&:nth-child(2) {
+			background-color: $pastel--pink;
+		}
+		&:nth-child(3) {
+			background-color: $pastel--green;
+		}
+		h2 {
+			color: white;
+		}
+		p {
+			margin: 45px 0px;
+		}
+	}
+}
+
+#coach_benefits {
+	background-size: cover;
+	min-height: 70vh;
+	display: flex;
+	align-items: center;
+	.slideshow_row {
+		height: 300px;
+		.benefit__slide {
+			p {
+				width: 85%;
+				margin: 0 auto;
+				text-align: center;
+			}
+		}
+	}
+	.popout__border {
+		border-color: $nebula;
+		.popout__inset {
+			background-color: $nebula;
+		}
+	}
+}
+
+#coach_qualifier {
+	min-height: 50vh;
+	width: 80%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+	h2 {
+		text-align: center;
+		padding: 75px 0px 45px 0px;
+		font-family: 'Playfair Display';
+	}
+	.single_qualifier {
+		display: flex;
+		align-items: center;
+		padding-bottom: 10px;
+		i {
+			color: $green;
+			font-size: 40px;
+			padding-right: 0.3em;
+		}
+	}
+}
+
+#coach_investment {
+	background-color: $p-green--light;
+	text-align: center;
+	min-height: 50vh;
+    padding: 50px 0px;
+    h2 {
+    	padding-bottom: 30px;
+    	width: 600px;
+    	margin: 0 auto;
+    	font-family: 'Playfair Display';
+    }
+    a {
+    	display: inline-block;
+    	margin-top: 20px;
+    }
+	span.fine-print {
+		padding-top: 10px;
+    	font-size: 12px;
+		display: block;
+		font-family: 'Playfair Display';
+		font-style: italic;
+		opacity: 0.5;
+	}
+	.boxes__wrapper {
+		display: grid;
+		justify-content: space-between;
+		text-align: left;
+    	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    	.card_wrapper {
+	    	margin: 0px 10px;
+    	}
+    	.popout__border {
+		    height: 500px;
+		    margin-bottom: 20px;
+		    width: 100%;
+		    .popout__inset {
+				display: flex;
+			    flex-direction: column;
+			    // padding-top: 40%;
+			    align-items: flex-start;
+			    justify-content: center;
+			    h3 {
+					&:after {
+						content:'';
+						height: 1px;
+						width: 50%;
+						background-color: black;
+						display: block;
+					    margin: 15px 0px;
+					}
+				}
+		    }
+		}
+		.card_wrapper.card-1 {
+			.popout__border {
+			border-color: $pastel--pink;
+		}
+		.popout__inset {
+			background-color: $pastel--pink;
+			}
+		}
+		.card_wrapper.card-2 {
+			.popout__border {
+			border-color: $pastel--purple;
+		}
+		.popout__inset {
+			background-color: $pastel--purple;
+			}
+		}
+		.card_wrapper.card-3{
+			.popout__border {
+			border-color: $pastel--green;
+		}
+		.popout__inset {
+			background-color: $pastel--green;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	#coach_hero {
+		.coach_hero__img {
+		    background-position: 0px -90px;
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {	
+	#coach_offers {
+		.offer__box {
+		    padding: 4vh 0px;
+			grid-column: 1/-1;
+			&:nth-child(1) {
+				p {
+					width: 100%;
+				}
+			}
+			p {
+				margin: 45px 20px;
+			}
+		}
+	}
+	.roots__tagline {
+	    height: 30vh;
+	    display: flex;
+	    align-items: center;
+	}
+	#coach_investment {
+		h2 {
+			width: auto;
+		}
+	}
+	#coach_qualifier {
+		.single_qualifier {
+			i {
+				font-size: 100px;
+				position: absolute;
+				opacity: 0.3;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 750px) {
+	#coach_offers {
+		.offer__box {
+			padding: 3em 6em; 
+		}
+	}
+}

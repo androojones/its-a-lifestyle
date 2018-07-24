@@ -1,0 +1,140 @@
+#faq_hero {
+    .img--background {
+        background-size: cover;
+    }
+    .hero_right {
+        background-color: $pastel--pink;
+    }
+}
+
+#faq_tabs {
+        background-color: $purple--light;
+    .tab__wrapper {
+        width: 75%;
+        margin: 0 auto;
+        padding: 100px 0px;
+        .tablinks {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 20px;
+        }
+    }
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    color: lightgrey;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: white;
+    color: black;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    border-top: none;
+    background-color: white;
+    padding-top: 5px;
+     animation: fadeEffect 1s; 
+     button {
+        font-size: 20px;
+     }
+     p {
+        font-style: italic;
+     }
+}
+
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion_wrapper {
+    .accordion {
+        background-color: white;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        margin: 10px;
+        width: calc(100% - 20px);
+        text-align: left;
+        line-height: 30px;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $grey--light;
+    }
+}
+
+.accordion.active {
+    color: white;
+}
+button.accordion.active:after {
+    color: white;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, .accordion:hover {
+    background-color: $pastel--green;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .tab {
+        display: flex;
+        flex-direction: column;
+        button {
+            text-align: left;
+        }
+    }
+}

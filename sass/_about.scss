@@ -1,0 +1,121 @@
+#about_hero {
+	.img--background {
+		background-attachment: fixed;
+		background-size: contain;
+		background-position: 0px;
+		height: 100vh;
+		width: 50%;
+		z-index: 1;
+		position: fixed;
+	}
+	.hero_right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: $pastel--green;
+		width: 50%;
+		height: 80vh;
+		margin-left: auto;
+	}
+}
+
+#about_why {
+	.why_block {
+		p:first-child {
+			padding-bottom: 20px;
+		}
+		&:nth-child(1) {
+			background-color: $pastel--purple;
+		}
+		&:nth-child(2) {
+			margin: 30px 0px;
+			text-align: center;
+		}
+		&:nth-child(3) {
+			background-color: $pastel--pink;
+		}
+	}
+}
+
+#about_blist {
+	background-color: white;
+	z-index: 1;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .slideshow_wrapper {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.blist__slide {
+			width: 65%;
+			margin: 0 auto;
+			p {
+				text-align: center;
+				font-size: 50px;
+				line-height: 65px !important;
+			}
+			.item--striked {
+				text-decoration: line-through;
+				text-align: center;
+	    	}
+		}
+		a.bucket_btn {
+			color: $hashtag--green;
+			border: 1px solid $hashtag--green;
+			border-radius: 50px;
+			width: 50px;
+			text-align: center;
+			&:hover{
+				border: 1px solid $hashtag--green;
+				color: white;
+			}
+    	}
+    	a.prev.bucket_btn {
+    		left: 0px;
+    	}
+    	a.next.bucket_btn {
+    		right: 0px;
+    	}
+    }
+}
+
+@media screen and (min-width: 750px) {
+	#about_why {
+		width: 50%;
+		margin-left: auto;
+		span {
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 32px;
+			letter-spacing: 0.8px;
+			margin: 0px;
+			color: $font--black;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	#about_hero {
+	.img--background {
+		background-size: cover;
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	#about_hero {
+		grid-template-columns: repeat(auto-fit,minmax(375px,1fr));
+		.img--background {
+			position: relative;
+			width: 100%;
+			background-position: -100px;
+		}
+		.hero_right {
+			width: 100%;
+		}
+	}
+}

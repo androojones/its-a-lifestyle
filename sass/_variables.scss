@@ -1,0 +1,276 @@
+//All colours used on site
+$green: rgba(2, 180, 164, 0.4);
+$hashtag--green: #02B4A4;
+$nebula: #C5D8D9;
+$purple--light: rgba(218, 210, 216, .2);
+$grey--light: #F6F6F6;
+
+$pastel--green: #C5D8D9;
+$p-green--light: rgba(197,216,217, 0.6);
+$pastel--pink: #EAC8CA;
+$pastel--purple: #DAD2D8;
+
+$font--black: #4A4D4F;
+
+//Targets all boxes with "missing border" and background images
+.popout__border {
+	border: 20px solid;
+	display: flex;
+	min-height: 200px;
+	.popout__inset {
+		margin: 10px;
+		width: 100%;
+	}
+}
+
+//Targets all boxes with "missing border" and background images
+.carousel__border {
+	border: 20px solid $pastel--green;;
+	height: 100%;
+	.carousel__border-inset {
+		margin: 10px;
+		height: calc(100% - 20px);
+		width: calc(100% - 20px);
+		background-color: $pastel--green;
+		display: flex;
+		align-items: center;
+	    flex-direction: column;
+	    justify-content: center;
+	}
+}
+
+//Applied on all hero images
+.hero {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	.img--background {
+		height: 80vh;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.hero_right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 10% 5%;
+		min-height: 50vh;
+	h1 {
+		color: white;
+		}
+	}
+}
+
+//Emphasis text 
+.text--green {
+	color: $hashtag--green;
+}
+
+//Styling for standard button
+.btn--green {
+	background-color: $hashtag--green;
+	text-transform: uppercase;
+	border: 2px solid $hashtag--green;
+	height: 40px;
+	padding: 10px 25px;
+	transition: all 0.2s ease-in-out;
+	color: white;
+	a, i {
+		color: white;
+	}
+	i {
+		padding-left: 10px;
+	}
+	&:hover {
+		background-color: rgba(255,255,255,0) !important;
+		color: $hashtag--green !important;
+		border: 2px solid $hashtag--green;
+		a, i {
+			color: $hashtag--green;
+		}
+	}
+}
+
+//Adds standardized padding across site
+.box--padding {
+	padding: 4em 5em;
+}
+
+//Disable resizing of text fields
+textarea {
+	resize: none;
+}
+
+//Slider Boxes Styling
+.box-slider__wrapper {
+	width: 95%;
+	margin: 0 auto;
+	padding: 7% 0px;
+	.box-slider__row {
+		width: 100%;
+		margin: 0 auto;
+		overflow: hidden;
+	    position: relative;
+	    .card_wrapper {
+			display: flex;
+			width: 300px;
+		    float: left;
+		    margin: 0px 20px 20px 0px;
+		    overflow: hidden;
+		    position: relative;
+		    transition: all .5s ease 0s;
+		}
+		.grow {
+			width: 600px;
+		}
+		.popout__border {
+			width: 300px;
+		}
+		.card__text {
+			bottom: 0;
+			left: 300px;
+			position: absolute;
+			width: 300px;
+			top: 0;
+			padding: 20px;
+			background-color: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			h3 {
+				&:after {
+					content:'';
+					height: 1px;
+					width: 50%;
+					background-color: black;
+					display: block;
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+}
+
+.popout__border.popout--bground {
+	background-image: url('http://localhost:8888/wordpress/wordpress-freelance-clients/hashtag/wp-content/uploads/2018/06/coach-roots-background.jpg');
+	background-size: cover;
+}
+
+.popout__inset {
+	display: flex;
+	align-items: center;
+	padding: 0px 20px;
+}
+
+//Social Icons in Footer and Nav
+.footer__icons i,
+.nav__media a i {
+		border: 2px solid $hashtag--green;
+		padding: 10px;
+		border-radius: 20px;
+		margin-right: 5px;
+		color: $hashtag--green;
+		transition: all 0.2s ease-in;
+		&:hover {
+			color: white;
+			background-color: $hashtag--green;
+	}
+}
+
+
+//Media Queries
+@media screen and (min-width: 750px) and (max-width: 1330px){
+	.box-slider__row {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+		.popout__border {
+			width: 300px;
+			.popout__inset {
+				h3 {
+					font-size: 3vw;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px){
+	.box-slider__wrapper {
+		.box-slider__row {
+			flex-direction: column;
+		    .card_wrapper {
+				width: 600px;
+			}
+			.card_wrapper.card-2 {
+				.popout__border {
+					order: 2;
+				}
+				.card__text {
+					position: initial;
+					order: 1;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 750px) {
+	.box-slider__wrapper {
+		.card_wrapper {
+		    min-height: 500px;
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.box--padding {
+		padding: 40px 20px;
+	}
+	.box-slider__wrapper {
+		.box-slider__row {
+			width: 100%;
+	    	.card_wrapper {
+			    float: none;
+			    width: 100%;
+			    min-height: 600px;
+			    margin-bottom: 30px;
+			}
+			.card_wrapper.card-2 {
+				.popout__border {
+					order: 1;
+				}
+				.card__text {
+					order: 2;
+				}
+			}
+			.popout__border {
+				width: 50%;
+			}
+		}
+		.card__text {
+			left: 50% !important;
+			width: 50% !important;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.box-slider__wrapper {
+		width: 90%;
+		.box-slider__row {
+	    	.card_wrapper {
+				flex-direction: column;
+				min-height: auto !important;
+			}
+			.popout__border {
+				width: 100%;
+				min-height: 300px;
+			}
+		}
+		.card__text {
+			position: initial !important;
+			width: 100% !important;
+		}
+	}
+}

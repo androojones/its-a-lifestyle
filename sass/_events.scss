@@ -1,0 +1,29 @@
+#events_hero {
+	background-color: $pastel--purple;
+}
+
+#events_cal {
+	    margin: 50px 0px;
+	.wcs-timetable__wrapper {
+		width: 85%;
+		margin: 0 auto;
+		.wcs-timetable__container {
+			padding: 0px;
+			box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+			.wcs-calendar__header {
+				margin-top: 2em;
+			}
+		}
+	}
+	.wcs-timetable__main-col,
+	.wcs-timetable__side-col {
+		background-color: white;
+		margin: 0px;
+		&:before {
+			background-color: inherit;
+		}
+	}
+	.wcs-timetable__side-col {
+	    border-right: 1px solid #D1D4D8;
+	}
+}

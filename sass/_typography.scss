@@ -1,0 +1,203 @@
+@import 'variables';
+
+// font-family: 'Roboto', sans-serif; Roboto:400,500
+// font-family: 'Playfair Display', serif; Playfair+Display:400,400
+
+// Universal Fonts
+
+body {
+	font-family: 'Roboto';
+	font-weight: 400;
+	color: $font--black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0px;
+}
+
+h1 {
+	font-size: 60px;
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 80px;
+}
+
+h2 {
+	font-size: 40px;
+	letter-spacing: 1px;
+	font-weight: 400;
+}
+
+h3 {
+	font-weight: 400;
+	font-size: 25px;
+}
+
+h4 {
+	font-weight: 400;
+	font-size: 18px;
+}
+
+
+p {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 32px;
+	letter-spacing: 0.8px;
+	margin: 0px;
+	color: $font--black;
+}
+
+
+a {
+	text-decoration: none;
+	color: black;
+	transition: all 0.2s ease-in-out;
+	&:hover {
+		color: $hashtag--green;
+	}
+}
+
+input {
+	font-weight: 400;
+	letter-spacing: 0.8px;
+	color: $font--black;
+	font-family: 'Roboto';
+}
+
+/*blockquotes*/
+
+blockquote {
+	background: #F7F7F7;
+	margin: 0;
+	padding: 20px;
+	p {
+		margin-top: 0;
+	}
+}
+
+/*tables*/
+
+table {
+	td {
+		padding: 10px;
+	}
+	tr td:first {
+		padding-right: 0;
+	}
+}
+
+/*def lists*/
+
+dt {
+	font-weight: 600;
+	padding-bottom: 5px;
+}
+
+dd {
+	padding: 10px;
+	margin-left: 10px;
+}
+
+/*lists*/
+
+ul li, ol li {
+	padding: 3px;
+}
+
+/*PRE*/
+
+pre {
+	background: #F7F7F7;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+}
+
+
+/*
+====================================
+Global Classes / Wordpress Specific
+====================================
+*/
+
+.aligncenter {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+img {
+	&.alignleft {
+		padding-right: 5px;
+	}
+	&.alignright {
+		padding-left: 5px;
+	}
+}
+
+.clear {
+	width: 100%;
+	float: left;
+	clear: both;
+}
+
+//Specialty Text
+h2.subtitles--white {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	color: white;
+	font-family: 'Playfair Display';
+	font-style: italic;
+}
+
+h2.post-title {
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+.card__text h3,
+.popout__inset h3 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 25px;
+	text-transform: uppercase;
+}
+
+.popout__inset {
+	h3 {
+		width: 50%;
+		font-size: 35px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	h1 {
+		font-size: 50px;
+	}
+	h2.subtitles--white {
+		position: initial;
+		padding: 20px 20px 0px 20px;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+	}
+	h2 {
+		padding: 0px 10px;
+	}
+	// .popout__inset {
+	// 	h3 {
+	// 		width: 100%;
+	// 		font-size: 30px;
+	// 	}
+	// }
+}

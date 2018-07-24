@@ -1,0 +1,263 @@
+/*!
+* Theme Name: HackerYou Starter Theme
+* Theme URI: http://hackeryou.com;
+* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Version: 1.0
+* Author: HackerYou
+* Author URI: http://hackeryou.com
+*/
+
+@import 'normalize';
+@import 'typography';
+@import 'navigation';
+@import 'sidebar';
+@import 'comments';
+@import 'footer';
+@import 'variables';
+@import 'coaching';
+@import 'about';
+@import 'contact';
+@import 'blog';
+@import 'faq';
+@import 'events';
+/*
+====================================
+Default Styling
+====================================
+*/
+
+img {
+	max-width: 100%;
+}
+
+body {
+	max-width: 1500px;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+section {
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 85%;
+}
+
+.content {
+	float: left;
+	width: 65%;
+	margin-right: 5%;
+}
+
+.full {
+	width: 100%;
+}
+
+//Home Page Styling
+#home-hero {
+	.hero__image {
+		width: 100%;
+		height: 90vh;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+#home-about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .ha__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		padding: 10% 20% 10% 10%;
+    	.btn--green {
+		    max-width: 275px;
+    	}
+    }
+    .ha__image {
+	    width: 100%;
+		height: 700px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+    }
+}
+
+#home_philosophy {
+	background-color: $purple--light;
+  .card_wrapper.card-1{
+    .popout__border {
+       border-color: $pastel--pink;
+    }
+    .popout__inset {
+      background-color: $pastel--pink;
+    }
+  }
+  .card_wrapper.card-2{
+    .popout__border {
+       border-color: $pastel--purple;
+    }
+    .popout__inset {
+      background-color: $pastel--purple;
+    }
+  }
+  .card_wrapper.card-3{
+    .popout__border {
+       border-color: $pastel--green;
+    }
+    .popout__inset {
+      background-color: $pastel--green;
+    }
+  }
+}
+
+#home-testimonials {
+    min-height: 80vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  //   .tmonial__wrapper {
+		// width: 50%;
+		// margin: 0 auto;
+		// position: relative;
+		// i {
+		// 	position: absolute;
+		// 	color: white;
+		// 	font-size: 70px;
+		//     top: -30px;
+		//     left: 10px;
+		// }
+  //   }
+}
+
+
+
+/* Slideshow container */
+.slideshow_row {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	   position: relative;
+	.slideshow_wrapper {
+  		position: relative;
+	}
+}
+
+/* Hide the images by default */
+.tmonial_slide {
+    display: none;
+    width: 80%;
+    margin: 0 auto;
+    p, span {
+    	color: white;
+    }
+    p {
+    	font-weight: bold;
+    	margin-bottom: 20px;
+    }
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  &:hover {
+  	color: white;
+  }
+}
+
+/* Position the "next button" to the right */
+.prev {
+	left: 10px;
+}
+.next {
+  right: 10px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: $hashtag--green;
+}
+
+/* The dots/bullets/indicators */
+.dots_row {
+	position: absolute;
+	bottom: 30px;
+	left: 40%;
+	.dot {
+	  cursor: pointer;
+	  height: 15px;
+	  width: 15px;
+	  margin: 0 2px;
+	  border: 1px solid white;
+	  border-radius: 50%;
+	  display: inline-block;
+	  transition: background-color 0.6s ease;
+	}	
+}
+
+.active, .dot:hover {
+  background-color: white;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media screen and (max-width: 750px) {
+  .slideshow_row {
+    .slideshow_wrapper {
+        height: 600px;
+        min-height: 600px;
+        margin: 20px 0px;
+        }
+        p {
+          font-size: 3.5vw;
+          line-height: 25px;
+          font-weight: 400;
+        }
+    }
+    .container {
+      width: 95%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  #home-about {
+    .ha__text {
+      grid-row: 1;
+      }
+    }
+}

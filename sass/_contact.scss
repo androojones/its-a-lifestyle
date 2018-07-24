@@ -1,0 +1,63 @@
+#contact_hero {
+	background-color: $pastel--purple;
+	.img--background {
+		background-size: cover;
+	}
+}
+
+#contact_form {
+	background-image: url('http://localhost:8888/wordpress/wordpress-freelance-clients/hashtag/wp-content/uploads/2018/07/contact-bkgrd-britt.jpg');
+	background-size: cover;
+	background-position: -65px center;
+	padding: 7em 0px;
+	.popout__border {
+		width: 60%;
+		border-color: $pastel--green;
+		margin: 0 auto;
+		.popout__inset {
+			background-color: $pastel--green;
+			padding: 5%;
+		}
+	}
+	#wpcf7-f70-o1 {
+		margin: 0 auto;
+		width: 75%;
+		input, textarea, label {
+			width: calc(100% - 5px);
+			border: 0px;
+		}
+		input, textarea {
+			margin: 5px;
+			padding-left: 10px;
+		}
+		textarea {
+			padding-top: 10px;
+		}
+		input {
+			height: 40px;
+		}
+		input[type=submit] {
+		 	color: white;
+		}
+		.contact_form__names {
+			display: flex;
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	#contact_form {
+		.popout__border {
+			width: 90%;
+		}
+		input, textarea, label {
+			width: 100% !important;
+		}
+		.contact_form__names {
+			flex-direction: column;
+		}
+		#wpcf7-f70-o1 {
+			width: 90%;
+		}
+	}
+}
